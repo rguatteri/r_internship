@@ -1,10 +1,12 @@
-# Clinical Pharmacogenetics of 2,000 Human Genomes — R Scripts
+# Clinical Pharmacogenomics of 2,000 Human Genomes — R Scripts
 
 ## Description
 
-This repository contains R scripts I personally created and worked on during my internship in the [Laboratory of Computational Genomics](https://bosco-aosp.github.io/computational-genomics-platform/) at the [IRCCS Policlinico di Sant'Orsola - Azienda Ospedaliero Universitaria di Bologna](https://www.aosp.bo.it/), as part of my [MSc in Pharmaceutical Biotechnology at the University of Bologna](https://corsi.unibo.it/2cycle/PharmaceuticalBiotechnology).
+This repository will contain R scripts I personally created and worked on during my internship in the [Laboratory of Computational Genomics](https://bosco-aosp.github.io/computational-genomics-platform/) at the [IRCCS Policlinico di Sant'Orsola - Azienda Ospedaliero Universitaria di Bologna](https://www.aosp.bo.it/), as part of my [MSc in Pharmaceutical Biotechnology at the University of Bologna](https://corsi.unibo.it/2cycle/PharmaceuticalBiotechnology).
 
-The internship project focused on establishing pharmacogenomic variants across approximately 2,000 human genomes. The scripts cover several analytical steps, including genotype frequency computation, sequencing coverage assessment, and population stratification via machine learning methods (K-Nearest Neighbors and K-means clustering).
+The internship project focused on establishing pharmacogenetic variants across approximately 2,000 human genomes. The scripts cover several analytical steps, including genotype frequency computation, sequencing coverage assessment, and population stratification via machine learning methods (K-Nearest Neighbors and K-means clustering).
+
+> ⚠️ **Scripts Currently Unavailable** The scripts listed in this repository are currently not publicly available: following a request from the laboratory, I have been asked to wait on sharing them until it is determined whether this work will be part of a scientific publication. I will update this repository accordingly once the situation is resolved; in the meantime, this README is shared to document the scope and structure of the project. If you have any questions, feel free to [reach out](https://www.linkedin.com/in/riccardo-guatteri/).
 
 > **Note:** These are not the only scripts used during the internship. This repository only includes scripts that I personally wrote and developed; scripts produced by other team members are not shared here.
 
@@ -24,12 +26,12 @@ Clinical data and results are **not** included in this repository. Only scripts 
 
 | Script | README | Description |
 |--------------------|--------------------|--------------------------------|
-| [`gt_freq.R`](gt_freq.R) | [`README_gt_freq.md`](README_gt_freq.md) | Computes per-variant genotype counts and frequencies across all individuals from the body of a gVCF file, with three output modes for handling non-standard genotype values |
-| [`coverage_analysis_preprocessing.R`](coverage_analysis_preprocessing.R) | [`README_coverage_analysis_preprocessing.md`](README_coverage_analysis_preprocessing.md) | Prepares input files for a coverage assessment on exonic and genomic regions harboring pharmacogenetic variants within WES and WGS cohorts |
-| [`coverage_analysis.R`](coverage_analysis.R) | [`README_coverage_analysis.md`](README_coverage_analysis.md) | Visualizes mean coverage distribution via heatmaps and determines how many samples fail to meet quality thresholds (\>30X for WES, \>20X for WGS) |
-| [`knn.R`](knn.R) | [`README_knn.md`](README_knn.md) | Predicts superpopulation assignment using KNN with cross-validation via the `caret` package, including model retraining on the full dataset |
-| [`knn_easy.R`](knn_easy.R) | [`README_knn_easy.md`](README_knn_easy.md) | Simplified version of `knn.R` using the `class` package for KNN classification, with manual hyperparameter tuning |
-| [`kmeans.R`](kmeans.R) | [`README_kmeans.md`](README_kmeans.md) | Attempted superpopulation assignment via K-means clustering (\~80.7% accuracy vs \>99% with KNN — ultimately not the most appropriate method) |
+| `gt_freq.R` | `README_gt_freq.md` | Computes per-variant genotype counts and frequencies across all individuals from the body of a gVCF file, with three output modes for handling non-standard genotype values |
+| `coverage_analysis_preprocessing.R` | `README_coverage_analysis_preprocessing.md` | Prepares input files for a coverage assessment on exonic and genomic regions harboring pharmacogenetic variants within WES and WGS cohorts |
+| `coverage_analysis.R` | `README_coverage_analysis.md` | Visualizes mean coverage distribution via heatmaps and determines how many samples fail to meet quality thresholds (\>30X for WES, \>20X for WGS) |
+| `knn.R` | `README_knn.md` | Predicts superpopulation assignment using KNN with cross-validation via the `caret` package, including model retraining on the full dataset |
+| `knn_easy.R` | `README_knn_easy.md` | Simplified version of `knn.R` using the `class` package for KNN classification, with manual hyperparameter tuning |
+| `kmeans.R` | `README_kmeans.md` | Attempted superpopulation assignment via K-means clustering (\~80.7% accuracy vs \>99% with KNN — ultimately not the most appropriate method) |
 
 ## Dependencies
 
